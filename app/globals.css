@@ -1,0 +1,243 @@
+:root {
+  --navy: #1a2332;
+  --slate: #3d4f5f;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --bg: #f8f9fb;
+  --card: #ffffff;
+  --border: #e2e6ec;
+  --text: #1a2332;
+  --text-muted: #6b7a8d;
+  --success: #059669;
+  --font-display: "Source Serif 4", Georgia, serif;
+  --font-body: "DM Sans", -apple-system, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background: var(--navy);
+  color: #fff;
+  padding: 48px 20px 40px;
+  text-align: center;
+}
+header h1 {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+header p {
+  color: #94a3b8;
+  font-size: 1.05rem;
+}
+
+.form-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  margin-top: -24px;
+  position: relative;
+  z-index: 1;
+}
+
+.form-section-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border);
+  color: var(--navy);
+}
+
+.form-section-title:not(:first-child) {
+  margin-top: 28px;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--slate);
+  margin-bottom: 4px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text);
+  background: #fff;
+  transition: border-color 0.15s;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin-top: 24px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn-primary:hover {
+  background: var(--accent-hover);
+}
+.btn-primary:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.result-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  margin-top: 24px;
+}
+.result-card h2 {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  color: var(--navy);
+}
+.letter-output {
+  white-space: pre-wrap;
+  font-family: "Source Serif 4", Georgia, serif;
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text);
+  padding: 24px;
+  background: #fafbfc;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.copy-btn:hover {
+  background: #0f1825;
+}
+
+.error-msg {
+  color: #dc2626;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-top: 16px;
+  font-size: 0.9rem;
+}
+
+.seo-section {
+  margin-top: 64px;
+  padding: 48px 0;
+  border-top: 1px solid var(--border);
+}
+.seo-section h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: var(--navy);
+}
+.seo-section h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  color: var(--navy);
+}
+.seo-section p {
+  color: var(--slate);
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+}
+
+footer {
+  text-align: center;
+  padding: 32px 20px;
+  color: var(--text-muted);
+  font-size: 0.825rem;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .form-card,
+  .result-card {
+    padding: 20px;
+  }
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
